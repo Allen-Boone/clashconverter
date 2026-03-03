@@ -177,3 +177,6 @@ pnpm-lock.yaml
 # IDEA
 .idea
 .claude/settings.local.json
+
+# test fixtures with sensitive data
+test/sing-box/sing-box-example.json
