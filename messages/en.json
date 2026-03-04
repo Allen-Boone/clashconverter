@@ -234,6 +234,58 @@
     "sing-box": "Sing-Box",
     "loon": "Loon"
   },
+  "kernelDescriptions": {
+    "txt": {
+      "title": "Proxy Links",
+      "description": "Shareable proxy links in URI format. Used for importing into clients.",
+      "features": [
+        "Universal format supported by most clients",
+        "Easy to share and distribute",
+        "Contains all proxy configuration in a single link",
+        "Can be imported directly into proxy clients"
+      ]
+    },
+    "clash-meta": {
+      "title": "Clash Meta (Mihomo)",
+      "description": "The continuation of Clash Meta with the latest features and protocol support.",
+      "features": [
+        "Supports all protocols including VLESS, Hysteria, Hysteria2",
+        "Active development with regular updates",
+        "Used by Clash Verge and other modern clients",
+        "Recommended for most users"
+      ]
+    },
+    "clash-premium": {
+      "title": "Clash Premium",
+      "description": "The original Clash core (formerly Clash for Windows kernel). No longer actively maintained.",
+      "features": [
+        "Does NOT support VLESS, Hysteria, Hysteria2",
+        "Stable but outdated, last updated in 2023",
+        "Legacy support for older configurations",
+        "Only choose if your client requires it"
+      ]
+    },
+    "sing-box": {
+      "title": "Sing-Box",
+      "description": "A universal proxy platform with support for multiple protocols and platforms.",
+      "features": [
+        "Supports SS, VMess, VLESS, Trojan, Hysteria, Hysteria2, HTTP",
+        "Does NOT support ShadowsocksR (SSR)",
+        "Used by Android, iOS, Windows, macOS, Linux clients",
+        "JSON format configuration"
+      ]
+    },
+    "loon": {
+      "title": "Loon",
+      "description": "A powerful iOS proxy client with advanced features and rule customization. Supports SS, SSR, VMess, and Trojan protocols.",
+      "features": [
+        "Supports SS, SSR, VMess, Trojan protocols",
+        "Does NOT support VLESS, Hysteria, Hysteria2, HTTP, HTTPS, SOCKS5",
+        "iOS exclusive with rich scripting support",
+        "INI-style configuration format with ACL4SSR rulesets"
+      ]
+    }
+  },
   "protocolFiltered": "{count} {protocol} node(s) filtered out (not supported by Clash Premium)",
   "unsupportedProtocol": "Unsupported protocol: {protocol}",
   "unsupportedProtocols": {
@@ -280,39 +332,6 @@
         { "title": "Select Your Output Format", "desc": "Choose between Clash Meta (Mihomo) for full protocol support, Clash Premium for legacy compatibility, or sing-box format. Clash Meta and sing-box support VLESS, Hysteria, and Hysteria2, while Clash Premium does not." },
         { "title": "Convert & Download", "desc": "Click the convert button and your configuration will be generated instantly. You can then download the config file or copy it to your clipboard." }
       ]
-    },
-    "kernelComparison": {
-      "title": "Output Format Comparison",
-      "meta": {
-        "title": "Clash Meta (Mihomo) - Recommended",
-        "description": "The actively maintained continuation of Clash with support for all modern proxy protocols.",
-        "features": [
-          "Supports VLESS, Hysteria, Hysteria2",
-          "Regular updates and bug fixes",
-          "Used by Clash Verge, Clash Nyanpasu",
-          "Best for new configurations"
-        ]
-      },
-      "premium": {
-        "title": "Clash Premium - Legacy Only",
-        "description": "The original Clash kernel. No longer actively maintained since 2023.",
-        "features": [
-          "No VLESS/Hysteria/Hysteria2 support",
-          "Stable but outdated",
-          "Legacy compatibility only",
-          "Use only if required by your client"
-        ]
-      },
-      "singbox": {
-        "title": "sing-box - Universal Platform",
-        "description": "A universal proxy platform supporting multiple protocols and platforms.",
-        "features": [
-          "Supports SS, VMess, VLESS, Trojan, Hysteria, Hysteria2, HTTP",
-          "No SSR and SOCKS5 support",
-          "Cross-platform (Android, iOS, Windows, macOS, Linux)",
-          "JSON format configuration"
-        ]
-      }
     },
     "faq": {
       "title": "Frequently Asked Questions",
