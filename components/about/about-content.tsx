@@ -48,7 +48,7 @@ export function AboutContent() {
         </p>
 
         {/* H2 - Features section */}
-        <h2 className="text-2xl md:text-3xl font-bold mt-10 mb-6 text-stone-900 dark:text-stone-100">
+        <h2 className="border-t border-stone-200 dark:border-stone-800 pt-10 text-center text-2xl md:text-3xl font-bold mt-10 mb-6 text-stone-900 dark:text-stone-100">
           {t('seoContent.features.title')}
         </h2>
 
@@ -62,7 +62,7 @@ export function AboutContent() {
         </ul>
 
         {/* H2 - Supported protocols section */}
-        <h2 className="text-2xl md:text-3xl font-bold mt-10 mb-6 text-stone-900 dark:text-stone-100">
+        <h2 className="border-t border-stone-200 dark:border-stone-800 pt-10 text-center text-2xl md:text-3xl font-bold mt-10 mb-6 text-stone-900 dark:text-stone-100">
           {t('seoContent.protocols.title')}
         </h2>
 
@@ -80,7 +80,7 @@ export function AboutContent() {
         </div>
 
         {/* H2 - How to use section */}
-        <h2 className="text-2xl md:text-3xl font-bold mt-10 mb-6 text-stone-900 dark:text-stone-100">
+        <h2 className="text-2xl md:text-3xl font-bold mt-10 mb-6 text-stone-900 dark:text-stone-100 border-t border-stone-200 dark:border-stone-800 pt-10 text-center">
           {t('seoContent.howToUse.title')}
         </h2>
 
@@ -100,47 +100,6 @@ export function AboutContent() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* H2 - Clash Meta vs Premium section */}
-        <h2 className="text-2xl md:text-3xl font-bold mt-10 mb-6 text-stone-900 dark:text-stone-100">
-          {t('seoContent.kernelComparison.title')}
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <Card className="p-6 border-2 border-green-200 dark:border-green-900">
-            <h3 className="text-xl font-bold text-green-700 dark:text-green-400 mb-3">
-              {t('seoContent.kernelComparison.meta.title')}
-            </h3>
-            <p className="text-sm text-stone-600 dark:text-stone-400 mb-4">
-              {t('seoContent.kernelComparison.meta.description')}
-            </p>
-            <ul className="space-y-2 text-sm text-stone-600 dark:text-stone-400">
-              {t.raw('seoContent.kernelComparison.meta.features').map((feature: string, i: number) => (
-                <li key={i} className="flex items-start">
-                  <span className="text-green-500 mr-2">✓</span>
-                  {feature}
-                </li>
-              ))}
-            </ul>
-          </Card>
-
-          <Card className="p-6 border-2 border-stone-200 dark:border-stone-800">
-            <h3 className="text-xl font-bold text-stone-700 dark:text-stone-400 mb-3">
-              {t('seoContent.kernelComparison.premium.title')}
-            </h3>
-            <p className="text-sm text-stone-600 dark:text-stone-400 mb-4">
-              {t('seoContent.kernelComparison.premium.description')}
-            </p>
-            <ul className="space-y-2 text-sm text-stone-600 dark:text-stone-400">
-              {t.raw('seoContent.kernelComparison.premium.features').map((feature: string, i: number) => (
-                <li key={i} className="flex items-start">
-                  <span className="text-stone-400 mr-2">✓</span>
-                  {feature}
-                </li>
-              ))}
-            </ul>
-          </Card>
         </div>
       </div>
 
