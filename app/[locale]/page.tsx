@@ -7,7 +7,8 @@ import { useTranslations } from 'next-intl';
 import { Info, Download } from 'lucide-react';
 import { JSONLDStructuredData } from '@/components/seo/seo-head';
 
-export default function Home({ params }: { params: Promise<{ locale: string }> }) {
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   const t = useTranslations();
 
   return (
@@ -37,7 +38,7 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
       </header>
       <main>
         <Converter />
-        <JSONLDStructuredData locale={params.locale as unknown as string} type="all" pageType="home" />
+        <JSONLDStructuredData locale={locale} type="all" pageType="home" />
       </main>
     </div>
   );
