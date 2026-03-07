@@ -31,8 +31,16 @@ export function SubscriptionDialog({
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [result, setResult] = useState<SubscriptionResult | null>(null);
   const [errorMessage, setErrorMessage] = useState('');
+  const [retryCount, setRetryCount] = useState(0);
+  const maxRetries = 3;
 
   const handleConvert = async () => {
+    if (retryCount >= maxRetries) {
+      setStatus('error');
+      setErrorMessage(t('subscription.maxRetriesReached'));
+      return;
+    }
+
     setStatus('loading');
     setErrorMessage('');
 
@@ -47,6 +55,7 @@ export function SubscriptionDialog({
       }
 
       setStatus('success');
+      setRetryCount(0); // Reset retry count on success
 
       // Determine the input format based on content type
       let inputFormat = 'txt';
@@ -61,7 +70,9 @@ export function SubscriptionDialog({
       onConvert(yamlContent, inputFormat, subscriptionResult.suggestedOutputFormat);
     } catch (error) {
       setStatus('error');
-      setErrorMessage(error instanceof Error ? error.message : t('subscription.fetchError'));
+      const errorMsg = error instanceof Error ? error.message : t('subscription.fetchError');
+      setErrorMessage(errorMsg);
+      setRetryCount(prev => prev + 1);
     }
   };
 
@@ -107,7 +118,12 @@ export function SubscriptionDialog({
             <AlertCircle className="w-12 h-12 text-destructive" />
             <div className="text-center space-y-2">
               <p className="font-medium text-destructive">{t('subscription.error')}</p>
-              <p className="text-sm text-muted-foreground">{errorMessage}</p>
+              <p className="text-sm text-muted-foreground break-all max-w-full">{errorMessage}</p>
+              {retryCount < maxRetries && (
+                <p className="text-xs text-muted-foreground">
+                  {t('subscription.retryAttempt', { current: retryCount, max: maxRetries })}
+                </p>
+              )}
             </div>
           </div>
         );

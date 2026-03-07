@@ -4,7 +4,8 @@
   "about": "关于",
   "backToHome": "返回首页",
   "footer": {
-    "rights": "版权所有"
+    "rights": "版权所有",
+    "contact": "联系"
   },
   "resources": {
     "menuTitle": "资源",
@@ -160,6 +161,8 @@
     "error": "转换错误",
     "fetchError": "获取订阅内容失败。请检查 URL 后重试。",
     "unknownError": "发生未知错误",
+    "maxRetriesReached": "已达到最大重试次数。请检查网络连接后重试。",
+    "retryAttempt": "重试第 {current}/{max} 次",
     "proxiesFound": "找到并转换了 {count} 个代理节点",
     "contentType": "内容类型",
     "successToast": "订阅转换成功！"

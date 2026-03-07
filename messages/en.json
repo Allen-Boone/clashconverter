@@ -4,7 +4,8 @@
   "about": "About",
   "backToHome": "Back to Home",
   "footer": {
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "contact": "Contact"
   },
   "resources": {
     "menuTitle": "Resources",
@@ -160,6 +161,8 @@
     "error": "Conversion Error",
     "fetchError": "Failed to fetch subscription content. Please check the URL and try again.",
     "unknownError": "An unknown error occurred",
+    "maxRetriesReached": "Maximum retry attempts reached. Please check your connection and try again.",
+    "retryAttempt": "Retry attempt {current}/{max}",
     "proxiesFound": "{count} proxy(s) found and converted",
     "contentType": "Content Type",
     "successToast": "Subscription converted successfully!"
