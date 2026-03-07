@@ -73,11 +73,22 @@ export const OutputSection = memo(({
           <CardHeader>
             <div className="flex items-center justify-between">
               <CardTitle
-                className="flex items-center gap-2 cursor-pointer hover:text-stone-600 dark:hover:text-stone-400 transition-colors"
+                className="flex items-center gap-2 cursor-pointer group select-none"
                 onClick={() => setDialogOpen(true)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setDialogOpen(true);
+                  }
+                }}
+                title="Click to view kernel features"
               >
-                <Download className="w-5 h-5" />
-                {labels.outputLabel}
+                <Download className="w-5 h-5 text-muted-foreground group-hover:text-foreground transition-colors" />
+                <span className="group-hover:underline group-focus-visible:underline decoration-muted-foreground underline-offset-4 transition-all">
+                  {labels.outputLabel}
+                </span>
               </CardTitle>
               <div className="flex items-center gap-2">
                 <FormatSelector

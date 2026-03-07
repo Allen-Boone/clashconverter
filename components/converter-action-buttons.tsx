@@ -15,20 +15,23 @@ export function ActionButtons({ onDownload, onCopy, disabled, downloadLabel, cop
       <Button
         onClick={onDownload}
         disabled={disabled}
-        className="flex-1 text-sm"
+        className="flex-1 text-sm min-w-0"
         size="sm"
+        title={disabled ? 'No content to download' : downloadLabel}
       >
-        <Download className="w-4 h-4 mr-1 md:mr-2" />
-        <span className="hidden md:inline">{downloadLabel}</span>
+        <Download className="w-4 h-4 mr-1 md:mr-2 shrink-0" />
+        <span className="hidden md:inline truncate">{downloadLabel}</span>
       </Button>
       <Button
         variant="outline"
         onClick={onCopy}
         disabled={disabled}
         size="sm"
+        className="min-w-0"
+        title={disabled ? 'No content to copy' : copyLabel}
       >
-        <Copy className="w-4 h-4" />
-        <span className="hidden md:inline ml-1 md:ml-2">{copyLabel}</span>
+        <Copy className="w-4 h-4 shrink-0" />
+        <span className="hidden md:inline ml-1 md:ml-2 truncate">{copyLabel}</span>
       </Button>
     </div>
   );
