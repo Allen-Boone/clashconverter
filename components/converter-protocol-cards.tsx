@@ -15,8 +15,8 @@ const PROTOCOL_CARDS = [
 export const ProtocolCards = React.memo(() => (
   <div className="grid grid-cols-2 gap-3 text-sm">
     {PROTOCOL_CARDS.map((protocol) => (
-      <div key={protocol.name} className="flex items-center gap-2 p-2 rounded-lg bg-stone-100 dark:bg-stone-800">
-        <span className="font-mono text-xs bg-stone-200 dark:bg-stone-700 px-2 py-1 rounded">
+      <div key={protocol.name} className="flex items-center gap-2 p-2 rounded-lg bg-muted min-w-0">
+        <span className="font-mono text-xs bg-secondary px-2 py-1 rounded truncate max-w-full">
           {protocol.name}
         </span>
       </div>

@@ -13,15 +13,15 @@ interface FormatSelectorProps {
 export function FormatSelector({ value, onChange, options, infoButton }: FormatSelectorProps) {
   return (
     <div className="flex items-center gap-2">
-      <Cpu className="w-4 h-4 text-muted-foreground" />
+      <Cpu className="w-4 h-4 text-muted-foreground shrink-0" />
       <Select value={value} onValueChange={(val) => onChange(val as FormatType)}>
-        <SelectTrigger className="w-[140px] h-8 text-xs">
-          <SelectValue />
+        <SelectTrigger className="w-full min-w-[120px] max-w-[180px] h-8 text-xs">
+          <SelectValue className="truncate" />
         </SelectTrigger>
         <SelectContent>
           {options.map((option) => (
             <SelectItem key={option.value} value={option.value}>
-              {option.label}
+              <span className="truncate block max-w-[200px]">{option.label}</span>
             </SelectItem>
           ))}
         </SelectContent>

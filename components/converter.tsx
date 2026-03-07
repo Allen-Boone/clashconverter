@@ -108,7 +108,7 @@ export function Converter() {
             itemsFound: t('itemsFound', { count: itemCount }),
           }}
         />
-        {/* Swap Button (centered) */}
+        {/* Swap Button (centered) - Desktop only */}
         <SwapButton onClick={handleSwapFormat} variant="desktop" />
 
         {/* Output Section - Right Side */}
