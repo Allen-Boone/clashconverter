@@ -3,13 +3,21 @@ import { ThemeToggle } from '@/components/theme-toggle';
 import { LanguageToggle } from '@/components/language-toggle';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Info, Download } from 'lucide-react';
 import { JSONLDStructuredData } from '@/components/seo/seo-head';
+import { locales } from '@/i18n';
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations(locale);
+
+  // Validate locale and set request locale for next-intl
+  if (!locales.includes(locale as any)) {
+    return <div>Unsupported locale</div>;
+  }
+
+  setRequestLocale(locale);
+  const t = await getTranslations();
 
   return (
     <div className="min-h-screen bg-stone-50 dark:bg-stone-950">

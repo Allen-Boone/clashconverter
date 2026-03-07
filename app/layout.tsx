@@ -1,4 +1,3 @@
-import React from "react";
 import { GoogleAdSense } from "@/components/google-adsense";
 
 const ADSENSE_ID = process.env.NEXT_PUBLIC_ADSENSE_ID;
@@ -18,7 +17,7 @@ export default function RootLayout({
           </>
         )}
       </head>
-      <body>{children}</body>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }
