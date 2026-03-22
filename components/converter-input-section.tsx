@@ -100,7 +100,7 @@ export const InputSection = memo(({
             />
           </div>
         </CardHeader>
-        <CardContent className="relative z-10 space-y-4 flex-1 flex flex-col">
+        <CardContent className="relative z-10 flex-1 flex flex-col">
           <PreviewEditor
             value={input}
             language={inputLanguage}
@@ -109,12 +109,14 @@ export const InputSection = memo(({
             onChange={onInputChange}
             className="flex-1"
           />
-          <ItemCount
-            count={itemCount}
-            onClear={onClear}
-            clearLabel={labels.clear}
-            countLabel={labels.itemsFound}
-          />
+          <div className="mt-2">
+            <ItemCount
+              count={itemCount}
+              onClear={onClear}
+              clearLabel={labels.clear}
+              countLabel={labels.itemsFound}
+            />
+          </div>
         </CardContent>
       </Card>
       <DialogContent className="max-w-md rounded-[2.5rem] border-border bg-card neo-card">

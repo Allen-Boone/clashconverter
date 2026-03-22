@@ -110,7 +110,7 @@ export const OutputSection = memo(({
               </div>
             </div>
           </CardHeader>
-          <CardContent className="relative z-10 space-y-4 flex-1 flex flex-col">
+          <CardContent className="relative z-10 flex-1 flex flex-col">
             <PreviewEditor
               key={outputFormat}
               value={output}
@@ -119,20 +119,22 @@ export const OutputSection = memo(({
               placeholder={outputPlaceholder}
               className="flex-1"
             />
-            <ActionButtons
-              onDownload={onDownload}
-              onCopy={onCopy}
-              disabled={itemCount === 0}
-              downloadLabel={labels.download}
-              copyLabel={labels.copy}
-            />
-            {/* Mobile swap button */}
-            <SwapButton
-              variant="mobile"
-              onClick={onSwapFormat}
-              disabled={!output || itemCount === 0}
-              label={labels.swapDirection}
-            />
+            <div className="mt-2 space-y-2">
+              <ActionButtons
+                onDownload={onDownload}
+                onCopy={onCopy}
+                disabled={itemCount === 0}
+                downloadLabel={labels.download}
+                copyLabel={labels.copy}
+              />
+              {/* Mobile swap button */}
+              <SwapButton
+                variant="mobile"
+                onClick={onSwapFormat}
+                disabled={!output || itemCount === 0}
+                label={labels.swapDirection}
+              />
+            </div>
           </CardContent>
         </Card>
         <DialogContent className="max-w-md rounded-[2.5rem] border-border bg-card neo-card">
