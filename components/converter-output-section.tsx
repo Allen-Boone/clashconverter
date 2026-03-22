@@ -73,7 +73,7 @@ export const OutputSection = memo(({
   return (
     <>
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <Card className="neo-card relative overflow-hidden rounded-[2.5rem] bg-card border-border transition-all duration-300 hover:neo-card-hover h-full flex flex-col">
+        <Card className="neo-card relative overflow-hidden rounded-[2.5rem] bg-card border-border transition-all duration-300 hover:neo-card-hover h-[47                                   0px] flex flex-col">
           <CardHeader className="relative z-10 pb-4">
             <div className="flex items-center justify-between">
               <CardTitle
