@@ -63,7 +63,7 @@ export const OutputSection = memo(({
       <Button
         variant="ghost"
         size="sm"
-        className="h-8 w-8 p-0 rounded-full hover:bg-[#8B5CF6]/10 hover:text-[#7C3AED] transition-all duration-300"
+        className="h-8 w-8 p-0 rounded-full hover:bg-lavender-200 hover:text-lavender-600 transition-all duration-300"
       >
         <Info className="w-4 h-4" />
       </Button>
@@ -73,14 +73,11 @@ export const OutputSection = memo(({
   return (
     <>
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <Card className="relative overflow-hidden rounded-[32px] bg-white/60 backdrop-blur-xl border-white/20 shadow-clay-card transition-all duration-500 hover:-translate-y-1 hover:shadow-clay-card-hover">
-          {/* Decorative gradient orb */}
-          <div className="absolute -top-20 -left-20 w-40 h-40 rounded-full bg-gradient-to-br from-[#EC4899]/10 to-[#DB2777]/10 blur-2xl pointer-events-none" />
-
+        <Card className="neo-card relative overflow-hidden rounded-[2.5rem] bg-lavender-50 border-white/60 transition-all duration-300 hover:neo-card-hover">
           <CardHeader className="relative z-10 pb-4">
             <div className="flex items-center justify-between">
               <CardTitle
-                className="flex items-center gap-2 cursor-pointer group select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7C3AED] focus-visible:ring-offset-2 rounded-[32px] px-2 py-1"
+                className="flex items-center gap-2 cursor-pointer group select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lavender-500 focus-visible:ring-offset-2 rounded-[2.5rem] px-2 py-1"
                 onClick={() => setDialogOpen(true)}
                 role="button"
                 tabIndex={0}
@@ -93,11 +90,11 @@ export const OutputSection = memo(({
                 title="Click to view kernel features"
                 aria-label={`View kernel features for ${labels.outputLabel}`}
               >
-                <div className="flex items-center justify-center w-10 h-10 rounded-2xl bg-gradient-to-br from-[#EC4899] to-[#DB2777] shadow-clay-button transition-all duration-300 group-hover:scale-105 group-hover:shadow-clay-button-hover">
+                <div className="flex items-center justify-center w-10 h-10 rounded-2xl bg-gradient-to-br from-pink-400 to-pink-600 neo-button transition-all duration-300 group-hover:scale-105">
                   <Download className="w-5 h-5 text-white" />
                 </div>
                 <span
-                  className="text-lg md:text-xl font-bold text-[#332F3A] group-hover:text-[#7C3AED] transition-colors duration-300"
+                  className="text-lg md:text-xl font-bold text-slate-700 group-hover:text-lavender-600 transition-colors duration-300"
                   style={{ fontFamily: 'Nunito, sans-serif' }}
                 >
                   {labels.outputLabel}
@@ -137,15 +134,15 @@ export const OutputSection = memo(({
             />
           </CardContent>
         </Card>
-        <DialogContent className="max-w-md rounded-[32px] border-white/20 bg-white/80 backdrop-blur-xl shadow-clay-card">
+        <DialogContent className="max-w-md rounded-[2.5rem] border-white/60 bg-lavender-50 neo-card">
           <DialogHeader>
             <DialogTitle
-              className="text-xl font-black text-[#332F3A]"
+              className="text-xl font-black text-slate-700"
               style={{ fontFamily: 'Nunito, sans-serif' }}
             >
               Kernel Features
             </DialogTitle>
-            <DialogDescription className="text-[#635F69]">
+            <DialogDescription className="text-slate-500">
               Supported features for this kernel
             </DialogDescription>
           </DialogHeader>

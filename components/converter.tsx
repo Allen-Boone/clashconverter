@@ -85,16 +85,13 @@ export function Converter() {
 
   return (
     <div className="w-full max-w-6xl mx-auto px-4 py-8 md:p-12 space-y-8 md:space-y-12">
-      {/* Header with gradient text */}
+      {/* Header */}
       <ConverterHeader title={t('title')} subtitle={t('subtitle')} />
 
-      {/* Main converter grid */}
-      <div className="grid gap-6 md:gap-10 md:grid-cols-2 relative">
-        {/* Decorative center element */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 md:w-24 md:h-24 rounded-full bg-gradient-to-br from-[#A78BFA]/20 to-[#7C3AED]/20 blur-xl pointer-events-none hidden md:block" />
-
+      {/* Main converter grid - simplified layout */}
+      <div className="grid gap-8 md:gap-10 md:grid-cols-2 relative">
         {/* Input Section - Left Side */}
-        <div className="relative">
+        <div>
           <InputSection
             input={input}
             inputFormat={inputFormat}
@@ -116,12 +113,12 @@ export function Converter() {
         </div>
 
         {/* Swap Button (centered) - Desktop only */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block">
+        <div className="absolute left-1/2 top-[180px] -translate-x-1/2 z-10 hidden md:block">
           <SwapButton onClick={handleSwapFormat} variant="desktop" />
         </div>
 
         {/* Output Section - Right Side */}
-        <div className="relative">
+        <div>
           <OutputSection
             output={output}
             outputFormat={outputFormat}
@@ -148,7 +145,7 @@ export function Converter() {
       </div>
 
       {/* Mobile swap button */}
-      <div className="md:hidden flex justify-center">
+      <div className="md:hidden flex justify-center mt-4">
         <SwapButton onClick={handleSwapFormat} variant="mobile" />
       </div>
 

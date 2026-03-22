@@ -14,7 +14,7 @@ export function SwapButton({ onClick, disabled, variant = 'desktop', label }: Sw
       <div className="mt-4 md:mt-6 md:hidden">
         <Button
           variant="outline"
-          className="w-full h-12 rounded-[20px] bg-white/80 text-[#332F3A] font-bold border-white/20 shadow-clay-button transition-all duration-300 hover:-translate-y-1 hover:shadow-clay-button-hover disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full h-12 rounded-full bg-lavender-50 text-slate-700 font-bold border-white/60 neo-button transition-all duration-300 hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
           onClick={onClick}
           disabled={disabled}
           size="default"
@@ -31,7 +31,7 @@ export function SwapButton({ onClick, disabled, variant = 'desktop', label }: Sw
     <Button
       size="default"
       variant="outline"
-      className="group relative w-14 h-14 rounded-full bg-white/90 text-[#7C3AED] border-white/20 shadow-clay-button transition-all duration-300 hover:-translate-y-1 hover:shadow-clay-button-hover active:scale-92 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-clay-button"
+      className="group relative w-14 h-14 rounded-full bg-lavender-50 text-lavender-600 border-white/60 neo-button transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
       onClick={onClick}
       title={disabled ? 'Add content to swap formats' : 'Swap input and output formats'}
       disabled={disabled}
