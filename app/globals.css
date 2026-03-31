@@ -1,74 +1,88 @@
-/* Import Claymorphism fonts */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Nunito:wght@700;800;900&display=swap');
+/* Neo-Technical Minimalism - Refined Precision */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  /* Claymorphism Canvas Background - Candy Shop Palette */
-  --clay-canvas: #F4F1FA;
-  --clay-foreground: #332F3A;
-  --clay-muted: #635F69;
-  --clay-accent: #7C3AED;
-  --clay-accent-alt: #DB2777;
-  --clay-accent-tertiary: #0EA5E9;
-  --clay-success: #10B981;
-  --clay-warning: #F59E0B;
+  /* Warm Neutral Foundation */
+  --neo-canvas: #F5F3EE;
+  --neo-canvas-dark: #0A0A0C;
 
-  /* Standard shadcn variables mapped to Claymorphism */
-  --background: 250 20% 96%;
-  --foreground: 260 13% 21%;
-  --card: 250 30% 100%;
-  --card-foreground: 260 13% 21%;
-  --popover: 250 30% 100%;
-  --popover-foreground: 260 13% 21%;
-  --primary: 260 84% 58%;
+  --neo-foreground: #1A1A1C;
+  --neo-muted: #6B6B6F;
+  --neo-muted-light: #9A9A9E;
+
+  /* Sharp Electric Accent */
+  --neo-accent: #00D9FF;
+  --neo-accent-hover: #00B8D9;
+  --neo-accent-muted: rgba(0, 217, 255, 0.15);
+
+  /* Structural Colors */
+  --neo-card: #FAF8F5;
+  --neo-card-dark: #121214;
+  --neo-card-elevated: #FFFFFF;
+  --neo-card-elevated-dark: #18181A;
+
+  --neo-border: rgba(0, 0, 0, 0.08);
+  --neo-border-strong: rgba(0, 0, 0, 0.15);
+  --neo-border-dark: rgba(255, 255, 255, 0.06);
+  --neo-border-strong-dark: rgba(255, 255, 255, 0.12);
+
+  /* State Colors */
+  --neo-success: #00C853;
+  --neo-warning: #FFB300;
+  --neo-error: #FF5252;
+
+  /* Standard shadcn variables mapped */
+  --background: 40 20% 96%;
+  --foreground: 0 0% 10%;
+  --card: 40 30% 99%;
+  --card-foreground: 0 0% 10%;
+  --popover: 40 30% 99%;
+  --popover-foreground: 0 0% 10%;
+  --primary: 190 100% 50%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 260 20% 90%;
-  --secondary-foreground: 260 13% 21%;
-  --muted: 260 10% 85%;
-  --muted-foreground: 260 8% 50%;
-  --accent: 260 84% 58%;
+  --secondary: 40 15% 92%;
+  --secondary-foreground: 0 0% 10%;
+  --muted: 40 10% 88%;
+  --muted-foreground: 0 0% 45%;
+  --accent: 190 100% 50%;
   --accent-foreground: 0 0% 100%;
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
-  --border: 260 15% 85%;
-  --input: 260 15% 85%;
-  --ring: 260 84% 58%;
-  --radius: 0.75rem;
-  --chart-1: 260 84% 58%;
-  --chart-2: 340 84% 55%;
-  --chart-3: 200 84% 55%;
-  --chart-4: 160 70% 45%;
-  --chart-5: 45 90% 55%;
+  --border: 0 0% 85%;
+  --input: 0 0% 85%;
+  --ring: 190 100% 50%;
+  --radius: 0.5rem;
+  --chart-1: 190 100% 50%;
+  --chart-2: 40 80% 55%;
+  --chart-3: 120 70% 45%;
+  --chart-4: 280 60% 55%;
+  --chart-5: 30 90% 55%;
 }
 
 .dark {
-  --background: 260 20% 10%;
-  --foreground: 260 10% 90%;
-  --card: 260 15% 12%;
-  --card-foreground: 260 10% 90%;
-  --popover: 260 15% 12%;
-  --popover-foreground: 260 10% 90%;
-  --primary: 260 84% 65%;
-  --primary-foreground: 260 13% 21%;
-  --secondary: 260 15% 18%;
-  --secondary-foreground: 260 10% 90%;
-  --muted: 260 10% 18%;
-  --muted-foreground: 260 8% 65%;
-  --accent: 260 84% 65%;
-  --accent-foreground: 260 13% 21%;
+  --background: 0 5% 5%;
+  --foreground: 0 0% 95%;
+  --card: 0 8% 8%;
+  --card-foreground: 0 0% 95%;
+  --popover: 0 8% 8%;
+  --popover-foreground: 0 0% 95%;
+  --primary: 190 100% 45%;
+  --primary-foreground: 0 0% 5%;
+  --secondary: 0 12% 12%;
+  --secondary-foreground: 0 0% 95%;
+  --muted: 0 10% 15%;
+  --muted-foreground: 0 0% 65%;
+  --accent: 190 100% 45%;
+  --accent-foreground: 0 0% 5%;
   --destructive: 0 62% 40%;
   --destructive-foreground: 0 0% 98%;
-  --border: 260 15% 20%;
-  --input: 260 15% 20%;
-  --ring: 260 84% 65%;
-  --chart-1: 260 84% 65%;
-  --chart-2: 340 84% 60%;
-  --chart-3: 200 84% 60%;
-  --chart-4: 160 70% 50%;
-  --chart-5: 45 90% 60%;
+  --border: 0 0% 18%;
+  --input: 0 0% 18%;
+  --ring: 190 100% 45%;
 }
 
 @layer base {
@@ -77,191 +91,228 @@
   }
 
   body {
-    font-family: var(--font-dm-sans), 'DM Sans', sans-serif;
-    background-color: var(--clay-canvas);
-    color: var(--clay-foreground);
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-weight: 400;
+    background-color: var(--neo-canvas);
+    color: var(--neo-foreground);
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-nunito), 'Nunito', sans-serif;
+  .dark body,
+  body.dark {
+    background-color: var(--neo-canvas-dark);
+    color: #E8E8EA;
+  }
+
+  /* Technical Headings */
+  h1, h2, h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.03em;
+  }
+
+  h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  /* Monospace for technical labels */
+  .mono {
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0;
   }
 }
 
 @layer utilities {
-  /* Claymorphism 4-Layer Shadow System */
+  /* Structural Shadows - Not Decorative */
 
-  /* Deep Clay Surface - for large containers */
-  .clay-surface {
+  /* Elevated Surface - subtle lift */
+  .neo-surface {
     box-shadow:
-      30px 30px 60px #cdc6d9,
-      -30px -30px 60px #ffffff,
-      inset 10px 10px 20px rgba(139, 92, 246, 0.05),
-      inset -10px -10px 20px rgba(255, 255, 255, 0.8);
+      0 1px 0 var(--neo-border),
+      0 4px 12px rgba(0, 0, 0, 0.03);
   }
 
-  .dark .clay-surface {
+  .dark .neo-surface {
     box-shadow:
-      20px 20px 40px rgba(0, 0, 0, 0.5),
-      -15px -15px 40px rgba(255, 255, 255, 0.08),
-      inset 8px 8px 16px rgba(0, 0, 0, 0.3),
-      inset -8px -8px 16px rgba(255, 255, 255, 0.05);
+      0 1px 0 var(--neo-border-dark),
+      0 4px 12px rgba(0, 0, 0, 0.3);
   }
 
-  /* Clay Card - floating cards with soft depth */
-  .clay-card {
+  /* Card - clean edge with subtle depth */
+  .neo-card {
     box-shadow:
-      16px 16px 32px rgba(160, 150, 180, 0.2),
-      -10px -10px 24px rgba(255, 255, 255, 0.9),
-      inset 6px 6px 12px rgba(139, 92, 246, 0.03),
-      inset -6px -6px 12px rgba(255, 255, 255, 1);
+      0 1px 0 var(--neo-border-strong),
+      0 8px 24px rgba(0, 0, 0, 0.04);
   }
 
-  .dark .clay-card {
+  .dark .neo-card {
     box-shadow:
-      12px 12px 24px rgba(0, 0, 0, 0.4),
-      -8px -8px 20px rgba(255, 255, 255, 0.08),
-      inset 4px 4px 8px rgba(0, 0, 0, 0.2),
-      inset -4px -4px 8px rgba(255, 255, 255, 0.05);
+      0 1px 0 var(--neo-border-strong-dark),
+      0 8px 24px rgba(0, 0, 0, 0.4);
   }
 
-  .clay-card-hover:hover {
+  /* Hover state - meaningful lift */
+  .neo-card-hover {
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  }
+
+  .neo-card-hover:hover {
+    transform: translateY(-2px);
     box-shadow:
-      20px 20px 40px rgba(160, 150, 180, 0.25),
-      -12px -12px 28px rgba(255, 255, 255, 0.9),
-      inset 6px 6px 12px rgba(139, 92, 246, 0.03),
-      inset -6px -6px 12px rgba(255, 255, 255, 1);
+      0 1px 0 var(--neo-border-strong),
+      0 12px 32px rgba(0, 0, 0, 0.06);
   }
 
-  .dark .clay-card-hover:hover {
+  .dark .neo-card-hover:hover {
     box-shadow:
-      16px 16px 32px rgba(0, 0, 0, 0.5),
-      -10px -10px 24px rgba(255, 255, 255, 0.1),
-      inset 4px 4px 8px rgba(0, 0, 0, 0.25),
-      inset -4px -4px 8px rgba(255, 255, 255, 0.06);
+      0 1px 0 var(--neo-border-strong-dark),
+      0 12px 32px rgba(0, 0, 0, 0.5);
   }
 
-  /* Clay Button - high convexity for interactive elements */
-  .clay-button {
+  /* Button - functional convexity */
+  .neo-button {
     box-shadow:
-      12px 12px 24px rgba(139, 92, 246, 0.3),
-      -8px -8px 16px rgba(255, 255, 255, 0.4),
-      inset 4px 4px 8px rgba(255, 255, 255, 0.4),
-      inset -4px -4px 8px rgba(0, 0, 0, 0.1);
+      0 1px 0 rgba(0, 0, 0, 0.06),
+      0 2px 4px rgba(0, 0, 0, 0.04);
   }
 
-  .dark .clay-button {
+  .dark .neo-button {
     box-shadow:
-      10px 10px 20px rgba(0, 0, 0, 0.4),
-      -6px -6px 16px rgba(255, 255, 255, 0.08),
-      inset 3px 3px 6px rgba(255, 255, 255, 0.1),
-      inset -3px -3px 6px rgba(0, 0, 0, 0.2);
+      0 1px 0 rgba(255, 255, 255, 0.04),
+      0 2px 4px rgba(0, 0, 0, 0.3);
   }
 
-  .clay-button-hover:hover {
+  .neo-button:hover {
     box-shadow:
-      16px 16px 32px rgba(139, 92, 246, 0.4),
-      -10px -10px 20px rgba(255, 255, 255, 0.5),
-      inset 4px 4px 8px rgba(255, 255, 255, 0.4),
-      inset -4px -4px 8px rgba(0, 0, 0, 0.1);
+      0 1px 0 rgba(0, 0, 0, 0.08),
+      0 4px 8px rgba(0, 0, 0, 0.06);
   }
 
-  .dark .clay-button-hover:hover {
+  .dark .neo-button:hover {
     box-shadow:
-      14px 14px 28px rgba(0, 0, 0, 0.5),
-      -8px -8px 20px rgba(255, 255, 255, 0.1),
-      inset 3px 3px 6px rgba(255, 255, 255, 0.1),
-      inset -3px -3px 6px rgba(0, 0, 0, 0.2);
+      0 1px 0 rgba(255, 255, 255, 0.06),
+      0 4px 8px rgba(0, 0, 0, 0.4);
   }
 
-  /* Clay Pressed - recessed for inputs and active states */
-  .clay-pressed {
+  /* Input - recessed for clarity */
+  .neo-input {
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  .dark .neo-input {
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Accent Glow - purposeful, not decorative */
+  .neo-glow {
+    box-shadow: 0 0 0 1px var(--neo-accent-muted);
+  }
+
+  .neo-glow-active {
     box-shadow:
-      inset 10px 10px 20px #d9d4e3,
-      inset -10px -10px 20px #ffffff;
+      0 0 0 1px var(--neo-accent),
+      0 0 20px var(--neo-accent-muted);
   }
 
-  .dark .clay-pressed {
-    box-shadow:
-      inset 6px 6px 12px rgba(0, 0, 0, 0.4),
-      inset -6px -6px 12px rgba(255, 255, 255, 0.05);
+  /* Geometric Accent Bar */
+  .neo-accent-bar {
+    position: relative;
   }
 
-  /* Clay Input - recessed input fields */
-  .clay-input {
-    box-shadow:
-      inset 8px 8px 16px rgba(166, 171, 189, 0.3),
-      inset -8px -8px 16px rgba(255, 255, 255, 0.8);
+  .neo-accent-bar::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--neo-accent);
   }
 
-  .dark .clay-input {
-    box-shadow:
-      inset 6px 6px 12px rgba(0, 0, 0, 0.4),
-      inset -6px -6px 12px rgba(255, 255, 255, 0.05);
+  /* Grid Lines - structural */
+  .neo-grid-lines {
+    background-image:
+      linear-gradient(var(--neo-border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--neo-border) 1px, transparent 1px);
+    background-size: 24px 24px;
   }
 
-  /* Dark mode specific classes for components */
-  .clay-card-dark {
-    box-shadow:
-      12px 12px 24px rgba(0, 0, 0, 0.4),
-      -8px -8px 20px rgba(255, 255, 255, 0.08),
-      inset 4px 4px 8px rgba(0, 0, 0, 0.2),
-      inset -4px -4px 8px rgba(255, 255, 255, 0.05);
+  .dark .neo-grid-lines {
+    background-image:
+      linear-gradient(var(--neo-border-dark) 1px, transparent 1px),
+      linear-gradient(90deg, var(--neo-border-dark) 1px, transparent 1px);
   }
 
-  .clay-card-hover-dark:hover {
-    box-shadow:
-      16px 16px 32px rgba(0, 0, 0, 0.5),
-      -10px -10px 24px rgba(255, 255, 255, 0.1),
-      inset 4px 4px 8px rgba(0, 0, 0, 0.25),
-      inset -4px -4px 8px rgba(255, 255, 255, 0.06);
+  /* Typography Utilities */
+  .neo-heading-xl {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
   }
 
-  .clay-button-dark {
-    box-shadow:
-      10px 10px 20px rgba(0, 0, 0, 0.4),
-      -6px -6px 16px rgba(255, 255, 255, 0.08),
-      inset 3px 3px 6px rgba(255, 255, 255, 0.1),
-      inset -3px -3px 6px rgba(0, 0, 0, 0.2);
+  .neo-heading-lg {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
   }
 
-  .clay-button-hover-dark:hover {
-    box-shadow:
-      14px 14px 28px rgba(0, 0, 0, 0.5),
-      -8px -8px 20px rgba(255, 255, 255, 0.1),
-      inset 3px 3px 6px rgba(255, 255, 255, 0.1),
-      inset -3px -3px 6px rgba(0, 0, 0, 0.2);
+  .neo-heading-md {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
   }
 
-  .clay-pressed-dark {
-    box-shadow:
-      inset 6px 6px 12px rgba(0, 0, 0, 0.4),
-      inset -6px -6px 12px rgba(255, 255, 255, 0.05);
+  .neo-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
   }
 
-  /* Text gradient for headings */
-  .clay-text-gradient {
-    background: linear-gradient(
-      135deg,
-      var(--clay-foreground) 20%,
-      var(--clay-accent) 60%,
-      var(--clay-accent-alt) 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  /* Entrance Animations */
+  .neo-enter {
+    opacity: 0;
+    transform: translateY(12px);
   }
 
-  /* Blob utility for background decorations */
-  .blob {
-    @apply absolute rounded-full blur-3xl opacity-40 pointer-events-none;
+  .neo-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
   }
 
+  /* Stagger delays */
+  .neo-delay-1 { transition-delay: 0.05s; }
+  .neo-delay-2 { transition-delay: 0.1s; }
+  .neo-delay-3 { transition-delay: 0.15s; }
+  .neo-delay-4 { transition-delay: 0.2s; }
+  .neo-delay-5 { transition-delay: 0.25s; }
+
+  /* Focus States */
+  .neo-focus {
+    outline: none;
+  }
+
+  .neo-focus:focus-visible {
+    outline: 2px solid var(--neo-accent);
+    outline-offset: 2px;
+  }
+
+  /* Text Balance */
   .text-balance {
     text-wrap: balance;
   }
 }
 
-/* Reduced motion for accessibility */
+/* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -270,4 +321,27 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neo-border-strong);
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--neo-border-strong-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neo-muted);
 }

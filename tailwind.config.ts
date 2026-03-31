@@ -11,17 +11,29 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Claymorphism Design System Colors - Candy Shop Palette
-        clay: {
-          canvas: "#F4F1FA",
-          foreground: "#332F3A",
-          muted: "#635F69",
-          accent: "#7C3AED",
-          accentAlt: "#DB2777",
-          accentTertiary: "#0EA5E9",
-          success: "#10B981",
-          warning: "#F59E0B",
+        // Neo-Technical Minimalism Design System
+        neo: {
+          canvas: "var(--neo-canvas)",
+          canvasDark: "var(--neo-canvas-dark)",
+          foreground: "var(--neo-foreground)",
+          muted: "var(--neo-muted)",
+          mutedLight: "var(--neo-muted-light)",
+          accent: "var(--neo-accent)",
+          accentHover: "var(--neo-accent-hover)",
+          accentMuted: "var(--neo-accent-muted)",
+          card: "var(--neo-card)",
+          cardDark: "var(--neo-card-dark)",
+          cardElevated: "var(--neo-card-elevated)",
+          cardElevatedDark: "var(--neo-card-elevated-dark)",
+          border: "var(--neo-border)",
+          borderStrong: "var(--neo-border-strong)",
+          borderDark: "var(--neo-border-dark)",
+          borderStrongDark: "var(--neo-border-strong-dark)",
+          success: "var(--neo-success)",
+          warning: "var(--neo-warning)",
+          error: "var(--neo-error)",
         },
+        // shadcn compatibility
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -67,106 +79,80 @@ const config: Config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-        // Claymorphism super-rounded corners
-        "clay-sm": "12px",
-        "clay-md": "16px",
-        "clay-lg": "20px",
-        "clay-xl": "24px",
-        "clay-2xl": "32px",
-        "clay-3xl": "40px",
-        "clay-4xl": "48px",
-        "clay-5xl": "60px",
-      },
-      boxShadow: {
-        // Claymorphism 4-layer shadow system
-        "clay-surface": `
-          30px 30px 60px #cdc6d9,
-          -30px -30px 60px #ffffff,
-          inset 10px 10px 20px rgba(139, 92, 246, 0.05),
-          inset -10px -10px 20px rgba(255, 255, 255, 0.8)
-        `,
-        "clay-card": `
-          16px 16px 32px rgba(160, 150, 180, 0.2),
-          -10px -10px 24px rgba(255, 255, 255, 0.9),
-          inset 6px 6px 12px rgba(139, 92, 246, 0.03),
-          inset -6px -6px 12px rgba(255, 255, 255, 1)
-        `,
-        "clay-card-hover": `
-          20px 20px 40px rgba(160, 150, 180, 0.25),
-          -12px -12px 28px rgba(255, 255, 255, 0.9),
-          inset 6px 6px 12px rgba(139, 92, 246, 0.03),
-          inset -6px -6px 12px rgba(255, 255, 255, 1)
-        `,
-        "clay-button": `
-          12px 12px 24px rgba(139, 92, 246, 0.3),
-          -8px -8px 16px rgba(255, 255, 255, 0.4),
-          inset 4px 4px 8px rgba(255, 255, 255, 0.4),
-          inset -4px -4px 8px rgba(0, 0, 0, 0.1)
-        `,
-        "clay-button-hover": `
-          16px 16px 32px rgba(139, 92, 246, 0.4),
-          -10px -10px 20px rgba(255, 255, 255, 0.5),
-          inset 4px 4px 8px rgba(255, 255, 255, 0.4),
-          inset -4px -4px 8px rgba(0, 0, 0, 0.1)
-        `,
-        "clay-pressed": `
-          inset 10px 10px 20px #d9d4e3,
-          inset -10px -10px 20px #ffffff
-        `,
-        "clay-input": `
-          inset 8px 8px 16px rgba(166, 171, 189, 0.3),
-          inset -8px -8px 16px rgba(255, 255, 255, 0.8)
-        `,
-      },
-      animation: {
-        "clay-float": "clay-float 8s ease-in-out infinite",
-        "clay-float-delayed": "clay-float-delayed 10s ease-in-out infinite",
-        "clay-float-slow": "clay-float-slow 12s ease-in-out infinite",
-        "clay-breathe": "clay-breathe 6s ease-in-out infinite",
-        "blob": "blob 15s ease-in-out infinite",
-      },
-      keyframes: {
-        "clay-float": {
-          "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
-          "50%": { transform: "translateY(-20px) rotate(2deg)" },
-        },
-        "clay-float-delayed": {
-          "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
-          "50%": { transform: "translateY(-15px) rotate(-2deg)" },
-        },
-        "clay-float-slow": {
-          "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
-          "50%": { transform: "translateY(-30px) rotate(5deg)" },
-        },
-        "clay-breathe": {
-          "0%, 100%": { transform: "scale(1)" },
-          "50%": { transform: "scale(1.02)" },
-        },
-        blob: {
-          "0%": {
-            transform: "translate(0px, 0px) scale(1)",
-          },
-          "33%": {
-            transform: "translate(30px, -50px) scale(1.1)",
-          },
-          "66%": {
-            transform: "translate(-20px, 20px) scale(0.9)",
-          },
-          "100%": {
-            transform: "translate(0px, 0px) scale(1)",
-          },
-        },
+        // Neo sharp edges
+        neo: "2px",
+        neoMd: "4px",
+        neoLg: "8px",
       },
       fontFamily: {
-        nunito: ["Nunito", "sans-serif"],
-        "dm-sans": ["DM Sans", "sans-serif"],
+        sans: ["Inter", "-apple-system", "sans-serif"],
+        display: ["Space Grotesk", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
+        // Legacy compatibility
+        nunito: ["Space Grotesk", "sans-serif"],
+        dmSans: ["Inter", "sans-serif"],
+      },
+      fontSize: {
+        // Fluid typography scale
+        "neo-xs": ["0.75rem", { lineHeight: "1.4", letterSpacing: "0.05em" }],
+        "neo-sm": ["0.875rem", { lineHeight: "1.4", letterSpacing: "-0.01em" }],
+        "neo-base": ["1rem", { lineHeight: "1.5", letterSpacing: "-0.01em" }],
+        "neo-lg": ["1.125rem", { lineHeight: "1.4", letterSpacing: "-0.02em" }],
+        "neo-xl": ["1.25rem", { lineHeight: "1.3", letterSpacing: "-0.02em" }],
+        "neo-2xl": ["1.5rem", { lineHeight: "1.2", letterSpacing: "-0.03em" }],
+        "neo-3xl": ["1.875rem", { lineHeight: "1.1", letterSpacing: "-0.03em" }],
+        "neo-4xl": ["2.25rem", { lineHeight: "1.1", letterSpacing: "-0.04em" }],
+      },
+      animation: {
+        // Purposeful animations
+        "neo-enter": "neo-enter 0.3s ease-out forwards",
+        "neo-enter-delayed": "neo-enter 0.3s ease-out 0.1s forwards",
+        "neo-pulse-subtle": "neo-pulse-subtle 2s ease-in-out infinite",
+        "neo-slide-in": "neo-slide-in 0.2s ease-out forwards",
+        "neo-fade": "neo-fade 0.15s ease-out forwards",
+      },
+      keyframes: {
+        "neo-enter": {
+          "0%": { opacity: "0", transform: "translateY(12px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "neo-pulse-subtle": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.7" },
+        },
+        "neo-slide-in": {
+          "0%": { opacity: "0", transform: "translateX(-8px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        "neo-fade": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
       },
       transitionDuration: {
-        "400": "400ms",
-        "500": "500ms",
+        "150": "150ms",
+        "200": "200ms",
+        "250": "250ms",
+        "300": "300ms",
       },
-      scale: {
-        "92": "0.92",
+      transitionTimingFunction: {
+        "neo-out": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "neo-in-out": "cubic-bezier(0.65, 0, 0.35, 1)",
+      },
+      spacing: {
+        // Fine-tuned spacing scale
+        "neo-1": "0.25rem",
+        "neo-2": "0.5rem",
+        "neo-3": "0.75rem",
+        "neo-4": "1rem",
+        "neo-5": "1.25rem",
+        "neo-6": "1.5rem",
+        "neo-8": "2rem",
+        "neo-10": "2.5rem",
+        "neo-12": "3rem",
+        "neo-16": "4rem",
+        "neo-20": "5rem",
+        "neo-24": "6rem",
       },
     },
   },
