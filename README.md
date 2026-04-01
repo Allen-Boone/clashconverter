@@ -10,8 +10,8 @@ A client-side proxy configuration converter that transforms various proxy protoc
 
 - **Client-side Processing**: All conversions happen in your browser - no server involved
 - **9 Proxy Protocols**: SS, SSR, VMess, VLESS, Trojan, Hysteria, Hysteria2, HTTP, SOCKS5
-- **Multiple Output Formats**: Clash Meta, Clash Premium, Sing-Box, Loon
-- **Bidirectional Conversion**: Proxy links ↔ Clash YAML ↔ Sing-Box JSON
+- **Multiple Output Formats**: Clash Meta, Clash Premium, Sing-Box, Loon, QuantumultX, Surfboard
+- **Bidirectional Conversion**: Proxy links ↔ Clash YAML ↔ Sing-Box JSON ↔ QuantumultX ↔ Surfboard
 - **Multi-Language**: English & 简体中文
 - **Dark/Light Theme**: System preference detection with Neo-Technical Minimalism design
 
@@ -50,6 +50,8 @@ NEXT_PUBLIC_ENABLE_CLASH_META_TRANSFER=true
 NEXT_PUBLIC_ENABLE_CLASH_PREMIUM_TRANSFER=true
 NEXT_PUBLIC_ENABLE_SINGBOX_TRANSFER=true
 NEXT_PUBLIC_ENABLE_LOON_TRANSFER=true
+NEXT_PUBLIC_ENABLE_QUANTUMULTX_TRANSFER=true
+NEXT_PUBLIC_ENABLE_SURFBOARD_TRANSFER=true
 ```
 
 ## Project Structure
@@ -110,15 +112,6 @@ pnpm test:ui
 pnpm test:coverage
 ```
 
-## Design System
-
-**Neo-Technical Minimalism** - A refined, technical aesthetic with:
-
-- **Colors**: Warm neutral canvas (`#F5F3EE` / `#0A0A0C` dark)
-- **Accent**: Electric cyan (`#00D9FF`)
-- **Typography**: Inter (body), Space Grotesk (headings), JetBrains Mono (labels)
-- **Features**: Structural grid backgrounds, subtle shadows, smooth animations
-
 ## Supported Protocols
 
 | Protocol | Format | Input | Output |
@@ -141,10 +134,12 @@ pnpm test:coverage
 | Clash Premium | ✓ | ✓ | ✓ | ✗ | ✓ | ✗ | ✗ | ✓ | ✓ |
 | Sing-Box | ✓ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✗ |
 | Loon | ✓ | ✓ | ✓ | ✗ | ✓ | ✗ | ✗ | ✗ | ✗ |
+| QuantumultX | ✓ | ✓ | ✓ | ✗ | ✓ | ✗ | ✗ | ✓ | ✓ |
+| Surfboard | ✓ | ✗ | ✓ | ✗ | ✓ | ✗ | ✓ | ✓ | ✓ |
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) for details.
+[MIT License](LICENSE)
 
 ## Support
 

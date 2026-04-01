@@ -130,7 +130,6 @@ export function Converter() {
             kernelFeatures={kernelFeatures}
             onCopy={handleCopy}
             onDownload={handleDownload}
-            onSwapFormat={handleSwapFormat}
             onFormatChange={setOutputFormat}
             formatOptions={outputFormatOptions}
             labels={{
@@ -138,7 +137,6 @@ export function Converter() {
               formatTypes: t.raw('formatTypes') as Record<string, string>,
               download: t('download'),
               copy: t('copy'),
-              swapDirection: t('swapDirection'),
             }}
           />
         </div>

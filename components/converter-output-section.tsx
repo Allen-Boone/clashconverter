@@ -14,7 +14,6 @@ import { PreviewEditor, type LanguageType } from '@/components/preview/preview-e
 import { FormatSelector } from './converter-format-selector';
 import { KernelFeatures } from './converter-kernel-features';
 import { FormatType } from '@/lib/parser';
-import { useState as useReactState } from 'react';
 
 interface OutputSectionProps {
   output: string;
@@ -27,7 +26,6 @@ interface OutputSectionProps {
   kernelFeatures: string[];
   onCopy: () => void;
   onDownload: () => void;
-  onSwapFormat: () => void;
   onFormatChange: (value: FormatType) => void;
   formatOptions: Array<{ value: FormatType; label: string }>;
   labels: {
@@ -35,7 +33,6 @@ interface OutputSectionProps {
     formatTypes: Record<string, string>;
     download: string;
     copy: string;
-    swapDirection: string;
   };
 }
 
@@ -55,7 +52,7 @@ export const OutputSection = memo(({
   labels,
 }: OutputSectionProps) => {
   const [dialogOpen, setDialogOpen] = useState(false);
-  const [copied, setCopied] = useReactState(false);
+  const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
     onCopy();
