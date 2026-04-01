@@ -5,7 +5,9 @@
   "backToHome": "Back to Home",
   "footer": {
     "rights": "All rights reserved.",
-    "contact": "Contact"
+    "contact": "Contact",
+    "description": "Professional proxy configuration converter. Transform proxy protocols into Clash YAML and Sing-Box JSON formats instantly.",
+    "connect": "Connect"
   },
   "resources": {
     "menuTitle": "Resources",
