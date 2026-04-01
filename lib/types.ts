@@ -17,21 +17,42 @@ export type {
   LegacyProxyNode,
 } from './types/proxy-nodes';
 
-// Re-export ProxyNode type (used in ParsedProxy interface)
+// Re-export type guards
+export {
+  isSSProxy,
+  isSSRProxy,
+  isVMessProxy,
+  isVLESSProxy,
+  isTrojanProxy,
+  isHysteriaProxy,
+  isHysteria2Proxy,
+  isHTTPProxy,
+  isSOCKS5Proxy,
+  isValidProxyType,
+} from './types/proxy-nodes';
+
+// Re-export ProxyNode as a type alias for convenience
 export type { ProxyNode } from './types/proxy-nodes';
 
-// Re-export validators (used in clash parser)
-export { safeValidateProxyNode } from './types/validators';
+// Re-export validators
+export {
+  validateProxyNode,
+  validateProxyNodes,
+  safeValidateProxyNode,
+  isValidProxyNode,
+  getSchemaForType,
+  ssProxySchema,
+  ssrProxySchema,
+  vmessProxySchema,
+  vlessProxySchema,
+  trojanProxySchema,
+  hysteriaProxySchema,
+  hysteria2ProxySchema,
+  httpProxySchema,
+  socks5ProxySchema,
+} from './types/validators';
 
-// ============================================================================
-// Helper Types
-// ============================================================================
-
-/**
- * Parsed proxy result with name and config
- */
 export interface ParsedProxy {
   name: string;
-  config: ProxyNode;
+  config: import('./types/proxy-nodes').ProxyNode;
 }
-
