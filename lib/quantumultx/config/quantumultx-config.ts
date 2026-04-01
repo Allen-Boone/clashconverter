@@ -14,7 +14,7 @@ export const QUANX_GENERAL = [
 export const QUANX_DNS = [
   'server=119.29.29.29',
   'server=223.5.5.5',
-  'server=1.0.0.1',
+  'server=1.1.1.1',
   'server=8.8.8.8',
 ];
 

@@ -21,3 +21,15 @@ export type {
 // Re-export validators (used in clash parser)
 export { safeValidateProxyNode } from './types/validators';
 
+// ============================================================================
+// Helper Types
+// ============================================================================
+
+/**
+ * Parsed proxy result with name and config
+ */
+export interface ParsedProxy {
+  name: string;
+  config: ProxyNode;
+}
+
