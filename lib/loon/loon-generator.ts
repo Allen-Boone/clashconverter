@@ -218,7 +218,7 @@ export class LoonGenerator extends BaseFormatGenerator {
    * @param proxyNames - List of all proxy names
    * @returns Loon formatted proxy group string
    */
-  private formatProxyGroup(group: LoonProxyGroupConfig, proxyNames: string[]): string {
+  protected formatProxyGroup(group: LoonProxyGroupConfig, proxyNames: string[]): string {
     let result = `${group.name} = ${group.type}`;
 
     // Add proxies
