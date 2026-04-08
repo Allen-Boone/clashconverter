@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const metadata = {
     en: {
       title: 'About Clash Converter | Free Proxy to Clash YAML Converter Tool',
-      description: 'Learn about Clash Converter - a free, secure, and privacy-focused online tool for converting proxy links (SS, SSR, VMess, Trojan, Hysteria, VLESS) to Clash YAML and Sing-Box JSON formats. All conversions happen client-side with no server upload.',
+      description: 'Learn about Clash Converter - a free, secure, and privacy-focused online tool for converting proxy links (SS, SSR, VMess, Trojan, Hysteria, VLESS) to Clash YAML, Sing-Box, Loon, QuantumultX, and Surfboard formats. All conversions happen client-side with no server upload.',
       keywords: [
         'about clash converter',
         'clash converter privacy',
@@ -30,6 +30,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         'privacy focused converter',
         'clash yaml converter',
         'singbox json converter',
+        'loon converter',
+        'quantumultx converter',
+        'surfboard converter',
         'proxy link converter',
         'vmess converter',
         'trojan converter',
@@ -41,8 +44,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       ]
     },
     zh: {
-      title: '关于Clash转换器 | 免费代理转Clash/Sing-Box配置工具',
-      description: '了解Clash转换器 - 一个免费、安全且注重隐私的在线工具，可将代理链接（SS、SSR、VMess、Trojan、Hysteria、VLESS）转换为Clash YAML和Sing-Box JSON格式。所有转换都在客户端进行，无需上传到服务器。',
+      title: '关于Clash转换器 | 免费代理转Clash/Sing-Box/Loon/QuantumultX/Surfboard配置工具',
+      description: '了解Clash转换器 - 一个免费、安全且注重隐私的在线工具，可将代理链接（SS、SSR、VMess、Trojan、Hysteria、VLESS）转换为Clash YAML、Sing-Box、Loon、QuantumultX、Surfboard格式。所有转换都在客户端进行，无需上传到服务器。',
       keywords: [
         '关于clash转换器',
         'clash转换器隐私',
@@ -53,6 +56,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         '隐私保护转换器',
         'clash yaml转换器',
         'singbox json转换器',
+        'loon转换器',
+        'quantumultx转换器',
+        'surfboard转换器',
         '代理链接转换器',
         'vmess转换器',
         'trojan转换器',
